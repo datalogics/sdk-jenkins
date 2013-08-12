@@ -1,0 +1,4 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<hudson.plugins.logparser.LogParserPublisher_-DescriptorImpl plugin="log-parser@1.0.8">
+  <parsingRulesGlobal/>
+</hudson.plugins.logparser.LogParserPublisher_-DescriptorImpl>

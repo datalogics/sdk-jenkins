@@ -1,0 +1,336 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<hudson>
+  <disabledAdministrativeMonitors>
+    <string>jenkins.security.RekeySecretAdminMonitor</string>
+  </disabledAdministrativeMonitors>
+  <version>1.523</version>
+  <numExecutors>8</numExecutors>
+  <mode>NORMAL</mode>
+  <useSecurity>true</useSecurity>
+  <authorizationStrategy class="hudson.security.ProjectMatrixAuthorizationStrategy">
+    <permission>com.sonyericsson.jenkins.plugins.bfa.PluginImpl.RemoveCause:bhaugen</permission>
+    <permission>com.sonyericsson.jenkins.plugins.bfa.PluginImpl.RemoveCause:devauto</permission>
+    <permission>com.sonyericsson.jenkins.plugins.bfa.PluginImpl.UpdateCauses:bhaugen</permission>
+    <permission>com.sonyericsson.jenkins.plugins.bfa.PluginImpl.UpdateCauses:devauto</permission>
+    <permission>hudson.model.Computer.Build:bhaugen</permission>
+    <permission>hudson.model.Computer.Build:devauto</permission>
+    <permission>hudson.model.Computer.Configure:bhaugen</permission>
+    <permission>hudson.model.Computer.Configure:devauto</permission>
+    <permission>hudson.model.Computer.Connect:bhaugen</permission>
+    <permission>hudson.model.Computer.Connect:devauto</permission>
+    <permission>hudson.model.Computer.Create:bhaugen</permission>
+    <permission>hudson.model.Computer.Create:devauto</permission>
+    <permission>hudson.model.Computer.Delete:bhaugen</permission>
+    <permission>hudson.model.Computer.Delete:devauto</permission>
+    <permission>hudson.model.Computer.Disconnect:bhaugen</permission>
+    <permission>hudson.model.Computer.Disconnect:devauto</permission>
+    <permission>hudson.model.Hudson.Administer:bhaugen</permission>
+    <permission>hudson.model.Hudson.Administer:devauto</permission>
+    <permission>hudson.model.Hudson.ConfigureUpdateCenter:bhaugen</permission>
+    <permission>hudson.model.Hudson.ConfigureUpdateCenter:devauto</permission>
+    <permission>hudson.model.Hudson.Read:anonymous</permission>
+    <permission>hudson.model.Hudson.Read:bhaugen</permission>
+    <permission>hudson.model.Hudson.Read:devauto</permission>
+    <permission>hudson.model.Hudson.RunScripts:bhaugen</permission>
+    <permission>hudson.model.Hudson.RunScripts:devauto</permission>
+    <permission>hudson.model.Hudson.UploadPlugins:bhaugen</permission>
+    <permission>hudson.model.Hudson.UploadPlugins:devauto</permission>
+    <permission>hudson.model.Item.Build:bhaugen</permission>
+    <permission>hudson.model.Item.Build:devauto</permission>
+    <permission>hudson.model.Item.Cancel:bhaugen</permission>
+    <permission>hudson.model.Item.Cancel:devauto</permission>
+    <permission>hudson.model.Item.Configure:bhaugen</permission>
+    <permission>hudson.model.Item.Configure:devauto</permission>
+    <permission>hudson.model.Item.Create:bhaugen</permission>
+    <permission>hudson.model.Item.Create:devauto</permission>
+    <permission>hudson.model.Item.Delete:bhaugen</permission>
+    <permission>hudson.model.Item.Delete:devauto</permission>
+    <permission>hudson.model.Item.Discover:bhaugen</permission>
+    <permission>hudson.model.Item.Discover:devauto</permission>
+    <permission>hudson.model.Item.Read:bhaugen</permission>
+    <permission>hudson.model.Item.Read:devauto</permission>
+    <permission>hudson.model.Item.Workspace:bhaugen</permission>
+    <permission>hudson.model.Item.Workspace:devauto</permission>
+    <permission>hudson.model.Run.Delete:bhaugen</permission>
+    <permission>hudson.model.Run.Delete:devauto</permission>
+    <permission>hudson.model.Run.Update:bhaugen</permission>
+    <permission>hudson.model.Run.Update:devauto</permission>
+    <permission>hudson.model.View.Configure:bhaugen</permission>
+    <permission>hudson.model.View.Configure:devauto</permission>
+    <permission>hudson.model.View.Create:bhaugen</permission>
+    <permission>hudson.model.View.Create:devauto</permission>
+    <permission>hudson.model.View.Delete:bhaugen</permission>
+    <permission>hudson.model.View.Delete:devauto</permission>
+    <permission>hudson.model.View.Read:anonymous</permission>
+    <permission>hudson.model.View.Read:bhaugen</permission>
+    <permission>hudson.model.View.Read:devauto</permission>
+    <permission>hudson.scm.SCM.Tag:devauto</permission>
+  </authorizationStrategy>
+  <securityRealm class="hudson.security.HudsonPrivateSecurityRealm">
+    <disableSignup>false</disableSignup>
+    <enableCaptcha>false</enableCaptcha>
+  </securityRealm>
+  <projectNamingStrategy class="jenkins.model.ProjectNamingStrategy$DefaultProjectNamingStrategy"/>
+  <workspaceDir>${JENKINS_HOME}/workspace/${ITEM_FULLNAME}</workspaceDir>
+  <buildsDir>${ITEM_ROOTDIR}/builds</buildsDir>
+  <markupFormatter class="hudson.markup.RawHtmlMarkupFormatter">
+    <disableSyntaxHighlighting>false</disableSyntaxHighlighting>
+  </markupFormatter>
+  <jdks/>
+  <viewsTabBar class="hudson.views.DefaultViewsTabBar"/>
+  <myViewsTabBar class="hudson.views.DefaultMyViewsTabBar"/>
+  <clouds/>
+  <slaves>
+    <slave>
+      <name>MacOSX-Angel</name>
+      <description></description>
+      <remoteFS>/Users/devauto</remoteFS>
+      <numExecutors>4</numExecutors>
+      <mode>EXCLUSIVE</mode>
+      <retentionStrategy class="hudson.slaves.RetentionStrategy$Always"/>
+      <launcher class="hudson.slaves.JNLPLauncher"/>
+      <label></label>
+      <nodeProperties>
+        <hudson.slaves.EnvironmentVariablesNodeProperty>
+          <envVars serialization="custom">
+            <unserializable-parents/>
+            <tree-map>
+              <default>
+                <comparator class="hudson.util.CaseInsensitiveComparator"/>
+              </default>
+              <int>1</int>
+              <string>PATH</string>
+              <string>/android-ndk-r8d/toolchains/arm-linux-androideabi-4.4.3/prebuilt/darwin-x86/bin:/android-ndk-r8d:/android-ndk-r8d/toolchains/arm-linux-androideabi-4.4.3/prebuilt/darwin-x86/bin:/android-ndk-r8d:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/usr/local/git/bin</string>
+            </tree-map>
+          </envVars>
+        </hudson.slaves.EnvironmentVariablesNodeProperty>
+      </nodeProperties>
+      <userId>devauto</userId>
+    </slave>
+    <slave>
+      <name>Windows2012-Wolverine</name>
+      <description>Windows server 2012</description>
+      <remoteFS>C:\Jenkins</remoteFS>
+      <numExecutors>4</numExecutors>
+      <mode>EXCLUSIVE</mode>
+      <retentionStrategy class="hudson.slaves.RetentionStrategy$Always"/>
+      <launcher class="hudson.slaves.JNLPLauncher"/>
+      <label></label>
+      <nodeProperties>
+        <hudson.slaves.EnvironmentVariablesNodeProperty>
+          <envVars serialization="custom">
+            <unserializable-parents/>
+            <tree-map>
+              <default>
+                <comparator class="hudson.util.CaseInsensitiveComparator"/>
+              </default>
+              <int>23</int>
+              <string>ANT_HOME</string>
+              <string>C:\Program Files\apache-ant-1.9.2</string>
+              <string>DevEnvDir</string>
+              <string>C:\Program Files (x86)\Microsoft Visual Studio 11.0\Common7\IDE\</string>
+              <string>ExtensionSdkDir</string>
+              <string>C:\Program Files (x86)\Microsoft SDKs\Windows\v8.0\ExtensionSDKs</string>
+              <string>Framework35Version</string>
+              <string>V3.5</string>
+              <string>FrameworkDir</string>
+              <string>C:\Windows\Microsoft.NET\Framework\</string>
+              <string>FrameworkDIR32</string>
+              <string>C:\Windows\Microsoft.NET\Framework\</string>
+              <string>FrameworkVersion</string>
+              <string>v4.0.30319</string>
+              <string>FrameworkVersion32</string>
+              <string>v4.0.30319</string>
+              <string>FSHARPINSTALLDIR</string>
+              <string>C:\Program Files (x86)\Microsoft SDKs\F#\3.0\Framework\v4.0\</string>
+              <string>INCLUDE</string>
+              <string>C:\Program Files (x86)\Microsoft Visual Studio 11.0\\VC\Include;C:\Program Files (x86)\Windows Kits\8.0\\Include;C:\Program Files (x86)\Microsoft Visual Studio 11.0\\VC\Include;C:\Program Files (x86)\Windows Kits\8.0\\Include;C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\INCLUDE;C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\ATLMFC\INCLUDE;C:\Program Files (x86)\Windows Kits\8.0\include\shared;C:\Program Files (x86)\Windows Kits\8.0\include\um;C:\Program Files (x86)\Windows Kits\8.0\include\winrt;</string>
+              <string>JAVA_HOME</string>
+              <string>C:\Program Files (x86)\Java</string>
+              <string>LIB</string>
+              <string>C:\Program Files (x86)\Microsoft Visual Studio 11.0\\VC\Lib;C:\Program Files (x86)\Windows Kits\8.0\\Lib;C:\Program Files (x86)\Microsoft Visual Studio 11.0\\VC\Lib;C:\Program Files (x86)\Windows Kits\8.0\\Lib;C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\LIB;C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\ATLMFC\LIB;C:\Program Files (x86)\Windows Kits\8.0\lib\win8\um\x86;</string>
+              <string>LIBPATH</string>
+              <string>C:\Windows\Microsoft.NET\Framework\v4.0.30319;C:\Windows\Microsoft.NET\Framework\v3.5;C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\LIB;C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\ATLMFC\LIB;C:\Program Files (x86)\Windows Kits\8.0\References\CommonConfiguration\Neutral;C:\Program Files (x86)\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Microsoft.VCLibs\11.0\References\CommonConfiguration\neutral;</string>
+              <string>OPENSSL_OUT</string>
+              <string>..\thirdparty\openssl\public\vc71</string>
+              <string>PATH</string>
+              <string>C:\Program Files (x86)\Microsoft Visual Studio 11.0\\VC\bin;C:\Program Files (x86)\Microsoft Visual Studio 11.0\\VC\bin\..\..\Common7\IDE;C:\Program Files (x86)\Windows Kits\8.0\;C:\Program Files (x86)\Windows Kits\8.0\\Bin;C:\Program Files (x86)\Microsoft Visual Studio 11.0\\VC\bin;C:\Program Files (x86)\Microsoft Visual Studio 11.0\\VC\bin\..\..\Common7\IDE;C:\Program Files (x86)\Windows Kits\8.0\;C:\Program Files (x86)\Windows Kits\8.0\\Bin;C:\Program Files (x86)\Microsoft Visual Studio 11.0\Common7\IDE\CommonExtensions\Microsoft\TestWindow;C:\Program Files (x86)\Microsoft SDKs\F#\3.0\Framework\v4.0\;C:\Program Files (x86)\Microsoft Visual Studio 11.0\VSTSDB\Deploy;C:\Program Files (x86)\Microsoft Visual Studio 11.0\Common7\IDE\;C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\BIN;C:\Program Files (x86)\Microsoft Visual Studio 11.0\Common7\Tools;C:\Windows\Microsoft.NET\Framework\v4.0.30319;C:\Windows\Microsoft.NET\Framework\v3.5;C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\VCPackages;C:\Program Files (x86)\HTML Help Workshop;C:\Program Files (x86)\Microsoft Visual Studio 11.0\Team Tools\Performance Tools;C:\Program Files (x86)\Windows Kits\8.0\bin\x86;C:\Program Files (x86)\Microsoft SDKs\Windows\v8.0A\bin\NETFX 4.0 Tools;C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\Bin\;C:\Perl\site\bin;C:\Perl\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Microsoft\Web Platform Installer\;C:\Program Files (x86)\Microsoft ASP.NET\ASP.NET Web Pages\v1.0\;C:\Program Files\Microsoft SQL Server\110\Tools\Binn\;C:\Program Files (x86)\Git\cmd;C:\Program Files (x86)\Git\bin;C:\Python25;C:\Program Files (x86)\WinZip;C:\Program Files (x86)\WinZip Self-Extractor;C:\Program Files\apache-ant-1.9.2\bin</string>
+              <string>VCINSTALLDIR</string>
+              <string>C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\</string>
+              <string>VS_IDE</string>
+              <string>C:\Program Files (x86)\Microsoft Visual Studio 11.0\\VC\bin\..\..\Common7\IDE</string>
+              <string>VS_VC</string>
+              <string>C:\Program Files (x86)\Microsoft Visual Studio 11.0\\VC</string>
+              <string>VS_VC_BIN</string>
+              <string>C:\Program Files (x86)\Microsoft Visual Studio 11.0\\VC\bin</string>
+              <string>VSINSTALLDIR</string>
+              <string>C:\Program Files (x86)\Microsoft Visual Studio 11.0\</string>
+              <string>WindowsSdkDir</string>
+              <string>C:\Program Files (x86)\Windows Kits\8.0\</string>
+              <string>WindowsSdkDir_35</string>
+              <string>C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\Bin\</string>
+              <string>WindowsSdkDir_old</string>
+              <string>C:\Program Files (x86)\Microsoft SDKs\Windows\v8.0A\</string>
+            </tree-map>
+          </envVars>
+        </hudson.slaves.EnvironmentVariablesNodeProperty>
+        <hudson.tools.ToolLocationNodeProperty>
+          <locations>
+            <hudson.tools.ToolLocationNodeProperty_-ToolLocation>
+              <type>hudson.plugins.git.GitTool$DescriptorImpl</type>
+              <name>Default</name>
+              <home>C:\Program Files (x86)\Git\bin\git.exe</home>
+            </hudson.tools.ToolLocationNodeProperty_-ToolLocation>
+          </locations>
+        </hudson.tools.ToolLocationNodeProperty>
+      </nodeProperties>
+      <userId>devauto</userId>
+    </slave>
+    <slave>
+      <name>Windows2008-Phoenix</name>
+      <description>Windows server 2008</description>
+      <remoteFS>C:\Jenkins</remoteFS>
+      <numExecutors>4</numExecutors>
+      <mode>EXCLUSIVE</mode>
+      <retentionStrategy class="hudson.slaves.RetentionStrategy$Always"/>
+      <launcher class="hudson.slaves.JNLPLauncher"/>
+      <label></label>
+      <nodeProperties>
+        <hudson.tools.ToolLocationNodeProperty>
+          <locations>
+            <hudson.tools.ToolLocationNodeProperty_-ToolLocation>
+              <type>hudson.plugins.git.GitTool$DescriptorImpl</type>
+              <name>Default</name>
+              <home>C:\Program Files (x86)\Git\bin\git.exe</home>
+            </hudson.tools.ToolLocationNodeProperty_-ToolLocation>
+          </locations>
+        </hudson.tools.ToolLocationNodeProperty>
+      </nodeProperties>
+      <userId>devauto</userId>
+    </slave>
+  </slaves>
+  <quietPeriod>5</quietPeriod>
+  <scmCheckoutRetryCount>0</scmCheckoutRetryCount>
+  <views>
+    <hudson.model.AllView>
+      <owner class="hudson" reference="../../.."/>
+      <name>All</name>
+      <filterExecutors>false</filterExecutors>
+      <filterQueue>false</filterQueue>
+      <properties class="hudson.model.View$PropertyList"/>
+    </hudson.model.AllView>
+    <listView>
+      <owner class="hudson" reference="../../.."/>
+      <name>RMSDK-CI-Builders</name>
+      <filterExecutors>false</filterExecutors>
+      <filterQueue>false</filterQueue>
+      <properties class="hudson.model.View$PropertyList"/>
+      <jobNames>
+        <comparator class="hudson.util.CaseInsensitiveComparator" reference="../../../../slaves/slave/nodeProperties/hudson.slaves.EnvironmentVariablesNodeProperty/envVars/tree-map/default/comparator"/>
+        <string>RMSDK-Android-CI-Builder</string>
+        <string>RMSDK-BBX-CI-Builder</string>
+        <string>RMSDK-iOS-CI-Builder</string>
+        <string>RMSDK-Mac-CI-Builder</string>
+        <string>RMSDK-Windows7-32-CI-Builder</string>
+        <string>RMSDK-Windows8-32-CI-Builder</string>
+        <string>RMSDK-Windows8-64-CI-Builder</string>
+        <string>RMSDK-WindowsRT-CI-Builder</string>
+      </jobNames>
+      <jobFilters/>
+      <columns>
+        <hudson.views.StatusColumn/>
+        <hudson.views.WeatherColumn/>
+        <hudson.views.JobColumn/>
+        <hudson.views.LastSuccessColumn/>
+        <hudson.views.LastFailureColumn/>
+        <hudson.views.LastDurationColumn/>
+        <hudson.views.BuildButtonColumn/>
+      </columns>
+      <recurse>false</recurse>
+    </listView>
+    <listView>
+      <owner class="hudson" reference="../../.."/>
+      <name>DLE-CI-Builders</name>
+      <filterExecutors>false</filterExecutors>
+      <filterQueue>false</filterQueue>
+      <properties class="hudson.model.View$PropertyList"/>
+      <jobNames>
+        <comparator class="hudson.util.CaseInsensitiveComparator"/>
+        <string>DLE-Windows7-32-APDFL10.1</string>
+        <string>DLE-Windows7-32-APDFL9.1</string>
+        <string>DLE-Windows7-64-APDFL10.1</string>
+        <string>DLE-Windows7-64-APDFL9.1</string>
+      </jobNames>
+      <jobFilters/>
+      <columns>
+        <hudson.views.StatusColumn/>
+        <hudson.views.WeatherColumn/>
+        <hudson.views.JobColumn/>
+        <hudson.views.LastSuccessColumn/>
+        <hudson.views.LastFailureColumn/>
+        <hudson.views.LastDurationColumn/>
+        <hudson.views.BuildButtonColumn/>
+      </columns>
+      <recurse>false</recurse>
+    </listView>
+    <listView>
+      <owner class="hudson" reference="../../.."/>
+      <name>RMSDK-Tests</name>
+      <filterExecutors>false</filterExecutors>
+      <filterQueue>false</filterQueue>
+      <properties class="hudson.model.View$PropertyList"/>
+      <jobNames>
+        <comparator class="hudson.util.CaseInsensitiveComparator" reference="../../../listView[2]/jobNames/comparator"/>
+        <string>RMSDK-Mac-OSX-tests</string>
+        <string>RMSDK-Windows7-tests</string>
+      </jobNames>
+      <jobFilters/>
+      <columns>
+        <hudson.views.StatusColumn/>
+        <hudson.views.WeatherColumn/>
+        <hudson.views.JobColumn/>
+        <hudson.views.LastSuccessColumn/>
+        <hudson.views.LastFailureColumn/>
+        <hudson.views.LastDurationColumn/>
+        <hudson.views.BuildButtonColumn/>
+      </columns>
+      <recurse>false</recurse>
+    </listView>
+    <listView>
+      <owner class="hudson" reference="../../.."/>
+      <name>Readium-SDK-Builds</name>
+      <description>This view lists the builders for the Readium SDK</description>
+      <filterExecutors>false</filterExecutors>
+      <filterQueue>false</filterQueue>
+      <properties class="hudson.model.View$PropertyList"/>
+      <jobNames>
+        <comparator class="hudson.util.CaseInsensitiveComparator"/>
+        <string>Readium-SDK-Android-Build</string>
+        <string>Readium-SDK-Android-Build-Develop</string>
+        <string>Readium-SDK-Build</string>
+        <string>Readium-SDK-Build-Develop</string>
+        <string>Readium-SDK-CI-UnitTests</string>
+        <string>Readium-SDK-CI-UnitTests-Develop</string>
+        <string>Readium-SDK-Windows-Develop</string>
+        <string>Readium-SDK-Windows-Master</string>
+      </jobNames>
+      <jobFilters/>
+      <columns>
+        <hudson.views.StatusColumn/>
+        <hudson.views.WeatherColumn/>
+        <hudson.views.JobColumn/>
+        <hudson.views.LastSuccessColumn/>
+        <hudson.views.LastFailureColumn/>
+        <hudson.views.LastDurationColumn/>
+        <hudson.views.BuildButtonColumn/>
+      </columns>
+      <recurse>false</recurse>
+    </listView>
+  </views>
+  <primaryView>Readium-SDK-Builds</primaryView>
+  <slaveAgentPort>0</slaveAgentPort>
+  <label></label>
+  <nodeProperties/>
+  <globalNodeProperties/>
+  <noUsageStatistics>true</noUsageStatistics>
+</hudson>

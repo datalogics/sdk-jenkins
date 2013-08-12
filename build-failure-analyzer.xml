@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<com.sonyericsson.jenkins.plugins.bfa.PluginImpl plugin="build-failure-analyzer@1.4.1">
+  <noCausesMessage>No problems were identified. If you know why this problem occurred, please add a suitable Cause for it.</noCausesMessage>
+  <globalEnabled>true</globalEnabled>
+  <gerritTriggerEnabled>true</gerritTriggerEnabled>
+  <knowledgeBase class="com.sonyericsson.jenkins.plugins.bfa.db.LocalFileKnowledgeBase">
+    <causes/>
+  </knowledgeBase>
+  <nrOfScanThreads>3</nrOfScanThreads>
+</com.sonyericsson.jenkins.plugins.bfa.PluginImpl>
